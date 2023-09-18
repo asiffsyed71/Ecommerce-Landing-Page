@@ -1,16 +1,12 @@
-import React, { useLayoutEffect } from 'react'
+
 import { navLinks } from '../constants';
 
 const MobileMenu = ({mobileMennuActive}) => {
 
-  useLayoutEffect(() => {
-    let windowWidth = window.innerWidth;
-    console.log(windowWidth)
-},[window.innerWidth])
   return (
     <section
         id="mobile-menu"
-        className={`absolute top-[6rem] sm:right-[4rem] right-[2rem]  w-1/3 bg-stone-100 p-8 text-5xl origin-top animate-open-menu md:${mobileMennuActive ? 'flex' : 'hidden'}`}
+        className={`absolute top-[6rem] sm:right-[4rem] right-[2rem]  w-1/3 bg-stone-100 p-8 text-5xl origin-top animate-open-menu ${mobileMennuActive ? 'flex' : 'hidden'}`}
       >
         {/* <nav
           className="flex flex-col min-h-screen items-center py-8 text-4xl"
